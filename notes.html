@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="page_title">
+        <h1 class="heading" id="page_title_1"style="background-color:#30a8dc;color:white;">N</h1>
+        <h1 class="heading" id="page_title_2" style="background-color:#e84a5f;color:white;">O</h1> 
+        <h1 class="heading" id="page_title_3" style="background-color:#805ad5;color:white">T</h1>
+        <h1 class="heading"  id="page_title_4" style="background-color:#2ac78a;color:white;">E</h1>
+        <h1 class="heading"  id="page_title_5" style="background-color:#ff5e3a;color:white">S</h1>
+    </div>
+    <div id="blur" style="  background-image: radial-gradient(circle,white,darkgrey,grey);
+    ;opacity:60%;width:100%;height:100vh;position:fixed;top:0px;left:0px;visibility:hidden;z-index:2"></div>
+    <button onclick="create_note()"  style="z-index:1"id="create_button">Create Note</button>
+    <button onclick="Dark_mode()" style="z-index:1" id="dark_mode_button">Dark mode</button>
+    <button onclick="delete localStorage.Notes; delete localStorage.Dark_mode; delete localStorage.Cols;window.location.reload()" style="z-index:1" id="erase_button">Erase</button>
+    <button onclick="change_cols = 1;arrange()" style="z-index:1" id="arrange_button" ></button>
+    <button onclick="settings()" value="false" style="z-index:1" id="settings_button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 13.616v-3.232l-2.869-1.02c-.198-.687-.472-1.342-.811-1.955l1.308-2.751-2.285-2.285-2.751 1.307c-.613-.339-1.269-.613-1.955-.811l-1.021-2.869h-3.232l-1.021 2.869c-.686.198-1.342.471-1.955.811l-2.751-1.308-2.285 2.285 1.308 2.752c-.339.613-.614 1.268-.811 1.955l-2.869 1.02v3.232l2.869 1.02c.197.687.472 1.342.811 1.955l-1.308 2.751 2.285 2.286 2.751-1.308c.613.339 1.269.613 1.955.811l1.021 2.869h3.232l1.021-2.869c.687-.198 1.342-.472 1.955-.811l2.751 1.308 2.285-2.286-1.308-2.751c.339-.613.613-1.268.811-1.955l2.869-1.02zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"/></svg></button>
+    <div id="note_container"></div>
+    <script src="./index.js"></script>
+</body>
+</html>
